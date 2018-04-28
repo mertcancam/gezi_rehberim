@@ -1,0 +1,28 @@
+<ion-content class="login-content" padding>
+  <ion-row class="logo-row">
+    <ion-col>
+      <img src="../../assets/bg.jpg" height="200" width="200" />
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <p>Gezi Rehberime Hoşgeldiniz</p>
+    </ion-col>
+  </ion-row>
+
+  <div class="login-box">
+    <form>
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full (click)="goToPnrPage()">Kullanıcı Girişi</button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full (click)="goToLoginPage()" full>Rehber Girişi</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>

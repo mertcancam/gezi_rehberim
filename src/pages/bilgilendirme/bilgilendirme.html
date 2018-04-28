@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>Geziyi Keşfet</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+
+  <ion-list>
+    <button (click)="expandItem(item)" ion-item text-wrap *ngFor="let item of items">
+      <h2 text-center>{{ item.title }}</h2>
+      <expandable [expanded]="item.expanded">
+        <p>{{ item.description}}</p>
+      </expandable>
+      <button ion-button clear item-end>{{ item.beingViewed }}</button>
+    </button>
+  </ion-list>
+
+
+
+
+</ion-content>
