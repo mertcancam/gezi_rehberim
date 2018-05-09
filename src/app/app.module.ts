@@ -17,7 +17,7 @@ import { OneriEkraniPage } from '../pages/oneri-ekrani/oneri-ekrani';
 import { TopluMesajPage } from '../pages/toplu-mesaj/toplu-mesaj';
 
 import { ExpandableComponent } from '../components/expandable/expandable';
-
+import { Push } from '@ionic-native/push';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -68,6 +68,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    Push,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
