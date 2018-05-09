@@ -12,7 +12,7 @@
 
   <ion-list>
     <button (click)="expandItem(item)" ion-item text-wrap *ngFor="let item of items">
-      <h2 text-center>{{ item.title }}</h2>
+      <h2 text-center>{{ item.name }}</h2>
       <expandable [expanded]="item.expanded">
         <p>{{ item.description}}</p>
       </expandable>
