@@ -14,12 +14,12 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public push: Push, public alertCtrl: AlertController) {
     let config = {
-    apiKey: "AIzaSyCCRROvIZzo_O1YyL_y2cxQxiXlUADZCJk",
-    authDomain: "gezi-rehberim-6f5f8.firebaseapp.com",
-    databaseURL: "https://gezi-rehberim-6f5f8.firebaseio.com",
-    projectId: "gezi-rehberim-6f5f8",
-    storageBucket: "gezi-rehberim-6f5f8.appspot.com",
-    messagingSenderId: "138324424153"
+      apiKey: "AIzaSyCCRROvIZzo_O1YyL_y2cxQxiXlUADZCJk",
+      authDomain: "gezi-rehberim-6f5f8.firebaseapp.com",
+      databaseURL: "https://gezi-rehberim-6f5f8.firebaseio.com",
+      projectId: "gezi-rehberim-6f5f8",
+      storageBucket: "",
+      messagingSenderId: "138324424153"
     };
     firebase.initializeApp(config);
     platform.ready().then(() => {

@@ -1,12 +1,37 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title text-center>Bizi Puanlayın</ion-title>
+    <ion-title text-center>Öneri ve Görüşlerim
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
+  <br>
+  <br>
 
+  <h6>Bu geziye puanınız nedir?</h6>
+  <br>
+  <ion-item>
+    <ion-label>Puanınız</ion-label>
+    <ion-select [(ngModel)]="puan">
+      <ion-option value="f">1</ion-option>
+      <ion-option value="m">2</ion-option>
+      <ion-option value="a">3</ion-option>
+      <ion-option value="s">4</ion-option>
+      <ion-option value="d">5</ion-option>
+    </ion-select>
+  </ion-item>
+  <br>
+  <br>
+  <h6>Bu geziyle ilgili görüşleriniz nedir?</h6>
+  <br>
+  <br>
+  <ion-item>
+      <ion-textarea rows="7"></ion-textarea>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col><button ion-button (click)="onay()" full >Gönder</button></ion-col>
+      </ion-row>
+    </ion-grid>
 </ion-content>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the OneriEkraniPage page.
@@ -15,9 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class OneriEkraniPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alert:AlertController) {
   }
-
+  onay(){
+    let alert = this.alert.create({
+      title:'Gezi Rehberim',
+      message:'Yorumunuz alındı. Çok teşekkür ederiz!',
+      buttons: ['Geri Dön']
+    });
+    alert.present();
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad OneriEkraniPage');
   }
