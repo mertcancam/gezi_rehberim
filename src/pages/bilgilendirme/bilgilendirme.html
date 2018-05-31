@@ -10,17 +10,14 @@
 <ion-content>
 
 
-  <ion-list>
+  <ion-list id="listItem">
     <button (click)="expandItem(item)" ion-item text-wrap *ngFor="let item of items">
-      <h2 text-center>{{ item.name }}</h2>
+      <h2 text-center *ngIf="pnr != item.PNR_no">{{ item.name }}</h2>
       <expandable [expanded]="item.expanded">
-        <p>{{ item.description}}</p>
+        <p *ngIf="pnr != item.PNR_no">{{ item.description}}</p>
       </expandable>
       <button ion-button clear item-end>{{ item.beingViewed }}</button>
     </button>
   </ion-list>
-
-
-
 
 </ion-content>

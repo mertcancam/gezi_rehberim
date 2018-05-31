@@ -18,6 +18,7 @@
   <ion-row>
     <ion-col>
       <p>Kullanıcı Giriş Ekranı</p>
+
     </ion-col>
   </ion-row>
   <div class="login-box">
@@ -26,7 +27,7 @@
         <ion-col>
           <ion-list inset>
             <ion-item>
-              <ion-input type="text" placeholder="PNR Numarası" name="email" required></ion-input>
+              <ion-input type="text" placeholder="PNR Numarası" name="pnr_no" [(ngModel)]="pnr_no"></ion-input>
             </ion-item>
           </ion-list>
         </ion-col>

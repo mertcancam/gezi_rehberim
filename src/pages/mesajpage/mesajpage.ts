@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as firebase from 'firebase';
-import { LoginPage } from '../login/login';
 /**
- * Generated class for the TopluMesajPage page.
+ * Generated class for the MesajpagePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,10 +10,10 @@ import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
-  selector: 'page-toplu-mesaj',
-  templateUrl: 'toplu-mesaj.html',
+  selector: 'page-mesajpage',
+  templateUrl: 'mesajpage.html',
 })
-export class TopluMesajPage {
+export class MesajpagePage {
   ref;
 	name;
 	newmessage;
@@ -37,12 +36,4 @@ export class TopluMesajPage {
   		this.messagesList = tmp;
   	});
   }
-  send(){
-  	// add new data to firebase
-  	this.ref.push({
-  		//name: this.name.username,
-		message: this.newmessage
-	  });
-	  this.newmessage = '';
-  }
-  }
+}

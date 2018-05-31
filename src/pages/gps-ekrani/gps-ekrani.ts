@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
 import {Geolocation} from '@ionic-native/geolocation';
 
 declare var google;
@@ -37,9 +37,14 @@ export class GpsEkraniPage {
           lng: position.coords.longitude
         };
 
-        that.infoWindow.setPosition(pos);
-        that.infoWindow.setContent('Bulundugunuz Konum');
-        that.infoWindow.open(that.map);
+        var marker = new google.maps.Marker({
+          position: pos,
+          map:  that.map,
+          title: 'Konumunuz',
+          animation:google.maps.Animation.BOUNCE,
+        });
+        
+        
         that.map.setCenter(pos);
       }, function() {
         this.handleLocationError(true, that.infoWindow,that.map.getCenter(),that.map);
@@ -58,9 +63,4 @@ export class GpsEkraniPage {
                           'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
   }  
-
-
-
-
-
 }
